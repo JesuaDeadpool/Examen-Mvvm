@@ -52,9 +52,6 @@ namespace Examen_Mvvm.ViewModel
                 }
                 else
                 {
-
-                  
-
                     Subtotal = Producto1 + Producto2 + Producto3; 
 
                     if(Subtotal >= 0.00 && Subtotal <= 999.99)
@@ -78,8 +75,6 @@ namespace Examen_Mvvm.ViewModel
                     }
 
                     Total = Subtotal - (Subtotal * Descuento); 
-                    
-
 
                 }
 
