@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Examen_Mvvm.View.DespensaView"
+             xmlns:viewModel="clr-namespace:Examen_Mvvm.ViewModel"
+             x:DataType="viewModel:DespensaViewModel">
+
+    <VerticalStackLayout Spacing="15" Padding="20">
+        <Label 
+            Text="Despensa"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" TextTransform="Uppercase" FontAttributes="Bold" FontSize="40" />
+
+    <Label Text="Valor Producto 1 : "/>
+    <Entry  Text="" Keyboard="Numeric" />
+
+    <Label Text="Valor Producto 2 : "/>
+    <Entry  Text="" Keyboard="Numeric" />
+
+    <Label Text="Valor Producto 3 : "/>
+    <Entry  Text="" Keyboard="Numeric" />
+
+     <Label Text="SubTotal: "/>
+     <Entry  Text="" Keyboard="Numeric" IsReadOnly="True"/>
+
+        <Label Text="Descuento: "/>
+        <Entry  Text="" Keyboard="Numeric" IsReadOnly="True" />
+
+        <Label Text="Total A Pagar: "/>
+        <Entry  Text="" Keyboard="Numeric" IsReadOnly="True"/>
+
+        <Grid RowDefinitions="*" ColumnDefinitions="*,*" ColumnSpacing="10">
+            <Button Text="Calcular" FontAttributes="Bold" BackgroundColor="DarkSeaGreen" FontSize="18" TextColor="White" Grid.Column="0" x:Name="BtnCalcular"/>
+            <Button Text="Limpiar" FontAttributes="Bold" BackgroundColor="DarkRed" FontSize="18" TextColor="White" Grid.Column="1" x:Name="BtnLimpiar"/>
+        </Grid>
+
+    </VerticalStackLayout>
+</ContentPage>
