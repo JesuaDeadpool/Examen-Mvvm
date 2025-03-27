@@ -5,7 +5,7 @@ namespace Examen_Mvvm.View;
 public partial class DespensaView : ContentPage
 {
 
-	DespensaViewModel viewModel; 
+	 DespensaViewModel viewModel; 
 	public DespensaView()
 	{
 		InitializeComponent();

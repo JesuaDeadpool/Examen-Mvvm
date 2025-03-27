@@ -12,26 +12,26 @@
             HorizontalOptions="Center" TextTransform="Uppercase" FontAttributes="Bold" FontSize="40" />
 
     <Label Text="Valor Producto 1 : "/>
-    <Entry  Text="" Keyboard="Numeric" />
+    <Entry  Text="{Binding Producto1}" Keyboard="Numeric" />
 
     <Label Text="Valor Producto 2 : "/>
-    <Entry  Text="" Keyboard="Numeric" />
+        <Entry  Text="{Binding Producto2}" Keyboard="Numeric" />
 
     <Label Text="Valor Producto 3 : "/>
-    <Entry  Text="" Keyboard="Numeric" />
+        <Entry  Text="{Binding Producto3}" Keyboard="Numeric" />
 
-     <Label Text="SubTotal: "/>
-     <Entry  Text="" Keyboard="Numeric" IsReadOnly="True"/>
+     <Label Text="SubTotal:"/>
+     <Entry  Text="{Binding Subtotal}" Keyboard="Numeric" IsReadOnly="True"/>
 
         <Label Text="Descuento: "/>
-        <Entry  Text="" Keyboard="Numeric" IsReadOnly="True" />
+        <Entry  Text="{Binding Descuento}" Keyboard="Numeric" IsReadOnly="True" />
 
         <Label Text="Total A Pagar: "/>
-        <Entry  Text="" Keyboard="Numeric" IsReadOnly="True"/>
+        <Entry  Text="{Binding Total}" Keyboard="Numeric" IsReadOnly="True"/>
 
         <Grid RowDefinitions="*" ColumnDefinitions="*,*" ColumnSpacing="10">
-            <Button Text="Calcular" FontAttributes="Bold" BackgroundColor="DarkSeaGreen" FontSize="18" TextColor="White" Grid.Column="0" x:Name="BtnCalcular"/>
-            <Button Text="Limpiar" FontAttributes="Bold" BackgroundColor="DarkRed" FontSize="18" TextColor="White" Grid.Column="1" x:Name="BtnLimpiar"/>
+            <Button Text="Calcular" FontAttributes="Bold" BackgroundColor="DarkSeaGreen" FontSize="18" TextColor="White" Grid.Column="0" x:Name="BtnCalcular" Command="{Binding CalcularCommand}"/>
+            <Button Text="Limpiar" FontAttributes="Bold" BackgroundColor="DarkRed" FontSize="18" TextColor="White" Grid.Column="1" x:Name="BtnLimpiar" Command="{Binding LimpiarCommand}"/>
         </Grid>
 
     </VerticalStackLayout>
